@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane xmlns="http://javafx.com/javafx/8.0.212" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <tabs>
+      <Tab closable="false" text="Lottery">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
+               <children>
+                  <GridPane layoutX="350.0" layoutY="255.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Select lottery type">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="lotteryTypeCB" fx:id="lotteryTypeCB" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin></ComboBox>
+                        <Label text="Select association option" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="visualOptCB" fx:id="visualOptCB" prefHeight="25.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin></ComboBox>
+                        <Button id="generateLottery" fx:id="generateLottery" mnemonicParsing="false" onAction="#generateLotteryAction" text="Generate Associations" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField id="confirmText" fx:id="confirmText" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Sport">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
+               <children>
+                  <GridPane layoutX="130.0" layoutY="54.0" prefHeight="374.0" prefWidth="598.0" vgap="15.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="100.0" text="Player 2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="100.0" text="Player 1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField id="playerOneName" fx:id="playerOneName" prefHeight="34.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="playerTwoName" fx:id="playerTwoName" layoutX="318.0" layoutY="24.0" prefHeight="34.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button id="generateButton" fx:id="generateButton" mnemonicParsing="false" onAction="#generateButtonAction" prefHeight="30.0" prefWidth="164.0" text="Generate Associations" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="74.0" layoutY="57.0" prefHeight="35.0" prefWidth="151.0" text="Competition" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField id="eventName" fx:id="eventName" layoutX="466.0" layoutY="58.0" prefHeight="34.0" prefWidth="241.0" promptText="TT Cup, férfi egyes" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="74.0" layoutY="100.0" prefHeight="35.0" prefWidth="100.0" text="Date" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField id="date" fx:id="date" layoutX="466.0" layoutY="101.0" prefHeight="34.0" prefWidth="154.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="74.0" layoutY="143.0" prefHeight="35.0" prefWidth="100.0" text="Time" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField id="time" fx:id="time" layoutX="466.0" layoutY="144.0" prefHeight="34.0" prefWidth="154.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextArea id="questionText" fx:id="questionText" editable="false" prefHeight="100.0" prefWidth="200.0" wrapText="true" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextArea>
+                        <Label text="Select association option" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="assocCBsport" fx:id="assocCBsport" prefHeight="25.0" prefWidth="194.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <CheckBox id="IDcb" fx:id="IDcb" disable="true" mnemonicParsing="false" text="Use Event ID" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <Button id="saveTargetManBtn" fx:id="saveTargetManBtn" disable="true" mnemonicParsing="false" onAction="#saveTargetManual" text="Save Event" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Sport Pics">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="400.0" layoutY="57.0" prefHeight="497.0" prefWidth="364.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+                     <children>
+                        <TextArea id="textAreaForPics" fx:id="textAreaForPics" editable="false" prefHeight="134.0" prefWidth="700.0" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin></TextArea>
+                        <GridPane alignment="CENTER" prefHeight="266.0" prefWidth="700.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button id="generateButtonPics" fx:id="generateButtonPics" alignment="CENTER" mnemonicParsing="false" onAction="#generateButtonPicsOnAction" prefHeight="30.0" prefWidth="157.0" text="Generate Associations">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button id="retrieveTargetButton" fx:id="retrieveTargetButton" alignment="CENTER" mnemonicParsing="false" onAction="#getLastSession" prefHeight="30.0" prefWidth="157.0" text="Retrieve Last Session" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button id="showImageOne" fx:id="showImageOne" mnemonicParsing="false" text="Show Image" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button id="showImageTwo" fx:id="showImageTwo" contentDisplay="CENTER" mnemonicParsing="false" text="Show Image" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <CheckBox id="IDcheckBox" fx:id="IDcheckBox" disable="true" mnemonicParsing="false" text="Use Event ID" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Select Event">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="400.0" layoutY="127.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView id="eventsTableView" fx:id="eventsTableView" prefHeight="415.0" prefWidth="890.0" stylesheets="@style.css">
+                          <columns>
+                            <TableColumn id="dateCol" fx:id="dateCol" prefWidth="160.0" text="Date">
+                               <cellValueFactory>
+                                  <PropertyValueFactory property="date" />
+                               </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn id="timeCol" fx:id="timeCol" prefWidth="132.0" text="Time">
+                               <cellValueFactory>
+                                  <PropertyValueFactory property="time" />
+                               </cellValueFactory>
+                            </TableColumn>
+                             <TableColumn id="competitionCol" fx:id="competitionCol" prefWidth="310.0" text="Competition">
+                                <cellValueFactory>
+                                   <PropertyValueFactory property="competition" />
+                                </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn id="oddsHCol" fx:id="oddsHCol" prefWidth="150.0" text="Odds Home">
+                                <cellValueFactory>
+                                   <PropertyValueFactory property="oddsH" />
+                                </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn id="oddsACol" fx:id="oddsACol" prefWidth="150.0" text="Odds Away">
+                                <cellValueFactory>
+                                   <PropertyValueFactory property="oddsA" />
+                                </cellValueFactory>
+                             </TableColumn>
+                          </columns>
+                        </TableView>
+                        <HBox prefHeight="100.0" prefWidth="900.0" spacing="30.0">
+                           <children>
+                              <Button id="downloadEventsBtn" fx:id="downloadEventsBtn" mnemonicParsing="false" onAction="#getEvents" prefHeight="30.0" prefWidth="133.0" text="Download Events">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <ProgressBar id="progressBar" fx:id="progressBar" prefWidth="200.0" progress="0.0" visible="false" />
+                           </children>
+                           <padding>
+                              <Insets left="30.0" right="520.0" top="35.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <Button id="saveTargetBtn" fx:id="saveTargetBtn" mnemonicParsing="false" onAction="#saveTarget" prefHeight="30.0" prefWidth="104.0" text="Save Event">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <TextField id="saveTargetLabel" fx:id="saveTargetLabel" editable="false" prefHeight="30.0" prefWidth="218.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TextField>
+                              <Label id="timeLabel" fx:id="timeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="250.0" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-alignment: right;" textAlignment="RIGHT">
+                                 <HBox.margin>
+                                    <Insets left="200.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="30.0" right="30.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
